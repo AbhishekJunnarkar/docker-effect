@@ -6,10 +6,25 @@
 
 $ docker run -it ubuntu bash
 
--- to check the steps executed
+-- To check the steps executed
 
 $ docker history
 
+-- To check the dockerfile in a directory
+
+$ vi /root/webapp-color/Dockerfile
+
+-- Build a docker image using the Dockerfile and name it webapp-color
+
+$ docker build -t webapp-color .
+
+-- Run an instance of the image webapp-color and publish port 8080 on the container to 8282 on the host
+
+$ docker run -p 8282:8080 webapp-color
+
+-- What is the base Operating System used by the python:3.6 image?
+
+$ Run docker run python:3.6 cat /etc/*release* command
 ## Docker run
 
 -- Attached Mode example
